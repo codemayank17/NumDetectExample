@@ -55,6 +55,37 @@ body .navbar .logo {
   font-weight: 700;
 }
 
+body .circle1,
+body .circle2 {
+  position: absolute;
+  width: 50vh;
+  height: 50vh;
+  z-index: -1;
+}
+
+body .circle1 {
+  top: 0;
+  right: 0;
+}
+
+body .circle2 {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+  bottom: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: auto;
+  }
+  body .circle1,
+  body .circle2 {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
 body .main {
   display: -webkit-box;
   display: -ms-flexbox;

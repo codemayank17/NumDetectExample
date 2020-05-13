@@ -40,7 +40,34 @@ body {
       font-weight: 700;
     }
   }
+  .circle1,
+  .circle2 {
+    position: absolute;
+    width: 50vh;
+    height: 50vh;
+    z-index: -1;
+  }
 
+  .circle1 {
+    top: 0;
+    right: 0;
+  }
+
+  .circle2 {
+    transform: rotateZ(180deg);
+    bottom: 0;
+    left: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: auto;
+
+    .circle1,
+    .circle2 {
+      width: 50vw;
+      height: 50vw;
+    }
+  }
   .main {
     display: flex;
     padding: 120px 10vw 0 10vw;
