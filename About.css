@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #001b3a;
+  font-family: "Montserrat", sans-serif;
+}
+
+body .navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #004466;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 10vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+body .navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+body .navbar .navlink {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+body .navbar .active {
+  font-weight: 700;
+  margin-left: 2vw;
+}
+
+body .navbar .logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 120px 10vw 0 10vw;
+  min-height: 100%;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  body .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+body .main .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0.6;
+      -ms-flex-positive: 0.6;
+          flex-grow: 0.6;
+  padding: 0 5em 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  body .main .left {
+    padding: 0;
+    margin-bottom: 100px;
+  }
+}
+
+body .main .left h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0.5em 0;
+  letter-spacing: 0.1em;
+}
+
+@media only screen and (max-width: 768px) {
+  body .main .left h3 {
+    margin: 1em 0;
+  }
+}
+
+body .main .left h3 span {
+  font-weight: 700;
+}
+
+body .main .left p {
+  line-height: 1.4em;
+  margin-bottom: 0.2em;
+}
+
+body .main .left a {
+  text-decoration: none;
+  color: #007dbb;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body .main .left a:hover {
+  color: #40d9ff;
+}
+
+body .main .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 40%;
+  text-align: end;
+}
+
+body .main .right h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 1em;
+  letter-spacing: 0.1em;
+}
+
+body .main .right .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 2em 1em;
+  background-color: #004466;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1vw;
+  border-radius: 10px;
+}
+
+body .main .right .card .roundicon {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 1em 0 0;
+}
+
+body .main .right .card .roundicon img {
+  width: 120px;
+  height: 120px;
+}
+
+body .main .right .card .cardDesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+body .main .right .card .cardDesc h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+
+body .main .right .card .cardDesc .role {
+  font-size: 12px;
+  font-weight: 400;
+  color: #979797;
+  margin-bottom: 10px;
+}
+
+body .main .right .card .cardDesc .socialLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body .main .right .card .cardDesc .socialLink span {
+  font-size: 12px;
+}
+
+body .main .right .card .cardDesc .socialLink svg {
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 0.2em;
+}
+
+body .main .right .card .cardDesc .socialLink:hover {
+  color: #001b3a;
+}
+
+@media only screen and (max-width: 768px) {
+  body .main .right h3 {
+    text-align: center;
+  }
+  body .main .right .card {
+    margin: 0 0 1em 0;
+    padding: 3vw;
+  }
+  body .main .right .card .roundicon {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 1em 0 0;
+  }
+  body .main .right .card .roundicon img {
+    width: 80px;
+    height: 80px;
+  }
+  body .main .right .card .socialLink {
+    margin-bottom: 7px;
+  }
+}
+/*# sourceMappingURL=About.css.map */
