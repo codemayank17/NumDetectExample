@@ -60,12 +60,10 @@ body {
   }
 
   @media only screen and (max-width: 768px) {
-    height: auto;
+    height: 100%;
 
-    .circle1,
     .circle2 {
-      width: 50vw;
-      height: 50vw;
+      display: none;
     }
   }
   .main {

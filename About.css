@@ -77,12 +77,10 @@ body .circle2 {
 
 @media only screen and (max-width: 768px) {
   body {
-    height: auto;
+    height: 100%;
   }
-  body .circle1,
   body .circle2 {
-    width: 50vw;
-    height: 50vw;
+    display: none;
   }
 }
 
