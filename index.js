@@ -121,7 +121,7 @@ window.onload = function () {
           e.preventDefault();
         }
       },
-      false
+      { passive: false }
     );
     document.body.addEventListener(
       "touchend",
@@ -130,7 +130,7 @@ window.onload = function () {
           e.preventDefault();
         }
       },
-      false
+      { passive: false }
     );
     document.body.addEventListener(
       "touchmove",
@@ -139,7 +139,7 @@ window.onload = function () {
           e.preventDefault();
         }
       },
-      false
+      { passive: false }
     );
 
     window.requestAnimFrame = (function (callback) {
