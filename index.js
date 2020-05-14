@@ -62,6 +62,14 @@ window.onload = function () {
       false
     );
     canvas.addEventListener(
+      "mouseout",
+      function (e) {
+        drawing = false;
+        generate();
+      },
+      false
+    );
+    canvas.addEventListener(
       "mousemove",
       function (e) {
         mousePos = getMousePos(canvas, e);

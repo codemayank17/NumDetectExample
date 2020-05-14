@@ -53,6 +53,10 @@ body {
     a {
       text-decoration: none;
       color: white;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $backgroundColor;
+      }
     }
     .navlink {
       font-weight: 400;
@@ -113,6 +117,7 @@ body {
         border: 1px solid;
         display: block;
         margin-bottom: 1em;
+        cursor: crosshair;
       }
     }
     .details {
@@ -146,7 +151,7 @@ body {
         margin-bottom: 20px;
       }
       span:nth-child(5) {
-        margin-top: 20px;
+        margin: 20px;
         font-size: 1em;
       }
 
@@ -154,6 +159,10 @@ body {
         border: 1px solid black;
         width: 28px;
         height: 28px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(8) translate(0, -10px);
+        }
       }
     }
   }
