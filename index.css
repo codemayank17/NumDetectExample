@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,15 +9,214 @@
 
 body {
   height: 100vh;
-  padding: 0 10vw;
+  background-color: #001b3a;
+  font-family: "Montserrat", sans-serif;
 }
 
-body canvas {
+body .circle1,
+body .circle2 {
+  position: absolute;
+  width: 50vh;
+  height: 50vh;
+  z-index: -1;
+}
+
+body .circle1 {
+  top: 0;
+  right: 0;
+}
+
+body .circle2 {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+  bottom: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: 100%;
+  }
+  body .circle2 {
+    display: none;
+  }
+}
+
+body .navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #004466;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 10vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+body .navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+body .navbar .navlink {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+body .navbar .active {
+  font-weight: 700;
+  margin-right: 2vw;
+}
+
+body .navbar .logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+body .main {
+  padding: 120px 10vw 0 10vw;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  body .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 2em;
+  }
+  body .main .board {
+    margin-bottom: 2em;
+  }
+}
+
+body .main .board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 280px;
+}
+
+body .main .board .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .main .board .button-group button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #004466;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+
+body .main .board .button-group button:focus, body .main .board .button-group button:hover {
+  border: none;
+  outline: none;
+}
+
+body .main .board span {
+  color: white;
+  margin-bottom: 5px;
+}
+
+body .main .board canvas {
   border: 1px solid;
   display: block;
+  margin-bottom: 1em;
 }
 
-body #canvas2 {
-  margin: auto;
+body .main .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 2em 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #004466;
+  border-radius: 10px;
+  max-width: 40vw;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  body .main .details {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+body .main .details span:nth-child(1) {
+  font-size: 2em;
+}
+
+body .main .details span:nth-child(2) {
+  font-size: 6em;
+  font-family: "Dosis", sans-serif;
+  margin-bottom: 20px;
+}
+
+body .main .details span:nth-child(3) {
+  font-size: 2em;
+}
+
+body .main .details span:nth-child(4) {
+  font-size: 5em;
+  font-family: "Dosis", sans-serif;
+  margin-bottom: 20px;
+}
+
+body .main .details span:nth-child(5) {
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+body .main .details #canvas2 {
+  border: 1px solid black;
+  width: 28px;
+  height: 28px;
 }
 /*# sourceMappingURL=index.css.map */
