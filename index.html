@@ -7,15 +7,38 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <canvas id="drawable" width="280" height="280"></canvas><br />
-      <button id="clear">Clear</button>
-      <button id="generate">Generate</button><br />
-      <canvas id="canvas2" width="28" height="28"></canvas><br />
-    </div>
-    <p id="p1"></p>
+    <!-- cirles -->
+    <img class="circle1" src="./projectImages/Ellipse 1.svg" alt="" />
 
-    <a href="./about.html">About this project</a>
+    <img class="circle2" src="./projectImages/Ellipse 1.svg" alt="" />
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a class="logo" href="./index.html">NumDetect</a>
+      <ul>
+        <li><a class="navlink active" href="./index.html">Home</a></li>
+        <li><a class="navlink" href="./About.html">About</a></li>
+      </ul>
+    </nav>
+    <!-- Main -->
+    <div class="main">
+      <div class="board">
+        <span>Draw Below to see prediction</span>
+        <canvas id="drawable" width="280" height="280"></canvas>
+        <div class="button-group">
+          <button id="clear">Clear</button>
+        </div>
+      </div>
+
+      <div class="details">
+        <span>Prediction</span>
+        <span id="p1">0</span>
+        <span>Confidence</span>
+        <span id="p2">0%</span>
+        <span>Image reduced to 28 x 28 pixels</span>
+        <canvas id="canvas2" width="28px" height="28px"></canvas>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
     <script
       type="text/JavaScript"
