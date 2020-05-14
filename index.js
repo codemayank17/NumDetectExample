@@ -64,8 +64,8 @@ window.onload = function () {
     canvas.addEventListener(
       "mouseout",
       function (e) {
+        drawing && generate();
         drawing = false;
-        generate();
       },
       false
     );
