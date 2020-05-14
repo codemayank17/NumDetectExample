@@ -183,6 +183,7 @@ body .main .details {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   background-color: #004466;
   border-radius: 10px;
   max-width: 40vw;
