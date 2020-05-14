@@ -17,10 +17,20 @@ window.onload = function () {
     //obj.print();
     tf.loadLayersModel("https://numdetectserv.herokuapp.com/model.json").then(
       (model) => {
-        document.getElementById("p1").innerHTML = model
-          .predict(obj)
-          .argMax(1)
-          .toString();
+        let m = model.predict(obj);
+
+        m.argMax(1)
+          .data()
+          .then(
+            (data) => (this.document.getElementById("p1").innerHTML = data[0])
+          );
+
+        m.max()
+          .data()
+          .then((data) => {
+            this.document.getElementById("p2").innerHTML =
+              (Math.round(data[0] * 10000) / 100).toString() + "%";
+          });
       }
     );
   };
@@ -59,6 +69,7 @@ window.onload = function () {
       })
       .mouseup(function (e) {
         isDown = false;
+        generate();
         ctx.closePath();
       });
 
@@ -66,10 +77,12 @@ window.onload = function () {
       ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
       ctx.fillStyle = "#000";
       ctx.fillRect(0, 0, myCanvas.width, myCanvas.height);
+      this.document.getElementById("p1").innerHTML = "0";
+      this.document.getElementById("p2").innerHTML = "0%";
     });
 
-    $("#generate").mousedown(() => {
-      generate();
-    });
+    // $("#generate").mousedown(() => {
+    //   generate();
+    // });
   }
 };
