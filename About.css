@@ -38,6 +38,12 @@ body .navbar ul {
 body .navbar a {
   text-decoration: none;
   color: white;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body .navbar a:hover {
+  color: #001b3a;
 }
 
 body .navbar .navlink {

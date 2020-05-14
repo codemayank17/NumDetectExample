@@ -10,6 +10,8 @@ window.onload = function () {
     obj = tf.image.resizeBilinear(obj, [28, 28]);
 
     obj = tf.div(obj, 255);
+
+    //console.log(obj.shape);
     tf.browser.toPixels(obj, canvas2);
 
     obj = obj.expandDims(0);
@@ -30,6 +32,8 @@ window.onload = function () {
             this.document.getElementById("p2").innerHTML =
               (Math.round(data[0] * 10000) / 100).toString() + "%";
           });
+
+        m.print();
       }
     );
   };

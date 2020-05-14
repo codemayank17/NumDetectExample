@@ -26,6 +26,10 @@ body {
     a {
       text-decoration: none;
       color: white;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $backgroundColor;
+      }
     }
     .navlink {
       font-weight: 400;
